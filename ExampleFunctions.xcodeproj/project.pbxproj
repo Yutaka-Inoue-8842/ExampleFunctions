@@ -84,13 +84,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		764FEADD28E43BDD00E5A65C /* UIActivityViewController */ = {
+		764FEADD28E43BDD00E5A65C /* Share */ = {
 			isa = PBXGroup;
 			children = (
 				764FEADE28E43C9F00E5A65C /* ShareExample.swift */,
 				764FEAE028E43CF600E5A65C /* ShareExample.storyboard */,
 			);
-			path = UIActivityViewController;
+			path = Share;
 			sourceTree = "<group>";
 		};
 		767F707028E3E89500364FD1 = {
@@ -156,7 +156,7 @@
 		767F70AD28E428AA00364FD1 /* UIKitExample */ = {
 			isa = PBXGroup;
 			children = (
-				764FEADD28E43BDD00E5A65C /* UIActivityViewController */,
+				764FEADD28E43BDD00E5A65C /* Share */,
 			);
 			path = UIKitExample;
 			sourceTree = "<group>";
