@@ -27,7 +27,7 @@
         <!--Main menu-->
         <scene sceneID="Ejx-GC-HsJ">
             <objects>
-                <viewController id="ReV-cl-l2q" customClass="MainViewController" customModule="ExampleFunctions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ReV-cl-l2q" customClass="MainMenuViewController" customModule="ExampleFunctions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QhM-3L-Gxj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
