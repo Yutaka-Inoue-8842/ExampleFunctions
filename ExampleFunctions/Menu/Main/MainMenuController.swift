@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainMenuViewController: UIViewController {
     
     @IBOutlet weak var tableView:UITableView!
     
@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
 
 }
 
-extension MainViewController: UITableViewDataSource {
+extension MainMenuViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
@@ -52,6 +52,6 @@ extension MainViewController: UITableViewDataSource {
     
 }
 
-extension MainViewController: UITableViewDelegate {
+extension MainMenuViewController: UITableViewDelegate {
     
 }
