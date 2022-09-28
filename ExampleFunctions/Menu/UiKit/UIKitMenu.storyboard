@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Kit Menu View Controller-->
+        <!--Kit Menu-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="UIKitMenuViewController" customModule="ExampleFunctions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="UIKitMenu" customModule="ExampleFunctions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,10 +44,24 @@
                             <constraint firstItem="ad4-jA-CAH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="th5-7s-YoL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="ad4-jA-CAH" id="r9d-1q-TXu"/>
+                        <segue destination="OFj-ag-TUr" kind="show" identifier="Share" id="vMP-dW-yTX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="3.5545023696682461"/>
+        </scene>
+        <!--ShareExample-->
+        <scene sceneID="N9q-uB-2rY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShareExample" id="OFj-ag-TUr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8X3-id-J4G"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Nc-ps-5aF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="-280"/>
         </scene>
     </scenes>
     <resources>

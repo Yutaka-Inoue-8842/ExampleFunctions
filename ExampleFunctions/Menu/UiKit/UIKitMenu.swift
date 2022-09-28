@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UIKitMenuViewController.swift
 //  ExampleFunctions
 //
 //  Created by Yutaka Inoue on 2022/09/28.
@@ -7,26 +7,21 @@
 
 import UIKit
 
-class MainMenuViewController: UIViewController {
+class UIKitMenu: UIViewController {
     
     @IBOutlet weak var tableView:UITableView!
     
-    let sections = ["Framework","Library"]
+    let sections = ["Examples"]
     
-    let items = [
-        0: ["UIKit","UserNotifications","Camera","Bluetooth","GPS"],
-        1: ["RxSwift","Alamofire","RealmSwift","Firebase"]
-    ]
+    let items = ["Share","Animation"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
 }
 
-extension MainMenuViewController: UITableViewDataSource {
+extension UIKitMenu: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
@@ -37,21 +32,24 @@ extension MainMenuViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let items = items[section] else { return 0 }
         return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:"MainMenuCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier:"UIKitMenuCell", for: indexPath)
         let row = indexPath.row
-        let section = indexPath.section
-        guard let items = items[section] else { return cell }
         cell.textLabel?.text = items[row]
         return cell
     }
     
+    
 }
 
-extension MainMenuViewController: UITableViewDelegate {
-    
+extension UIKitMenu: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let row = indexPath.row
+        let section = indexPath.section
+        performSegue(withIdentifier: items[row], sender: nil)
+    }
 }
