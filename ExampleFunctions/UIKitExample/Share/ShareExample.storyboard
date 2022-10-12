@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,16 +16,72 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qDR-g2-r97">
+                                <rect key="frame" x="240" y="147" width="100" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="icb-Mg-bPX">
+                                        <rect key="frame" x="0.0" y="-1.3333333333333357" width="100" height="83"/>
+                                        <imageReference key="image" image="photo.artframe" catalog="system" symbolScale="large"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="写真" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UH5-DY-tVO">
+                                        <rect key="frame" x="0.0" y="79.666666666666657" width="100" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3qD-gL-qsP"/>
+                                    <constraint firstItem="icb-Mg-bPX" firstAttribute="top" secondItem="qDR-g2-r97" secondAttribute="top" id="OoD-Ek-Lwe"/>
+                                    <constraint firstAttribute="height" constant="100" id="X0h-cF-amp"/>
+                                    <constraint firstAttribute="bottom" secondItem="icb-Mg-bPX" secondAttribute="bottom" constant="20.329999999999998" id="uiz-pF-oWv"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F3c-3y-CY9">
+                                <rect key="frame" x="50" y="147" width="100" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MMR-UX-nFh">
+                                        <rect key="frame" x="0.0" y="2.6666666666666643" width="100" height="74.666666666666686"/>
+                                        <imageReference key="image" image="textformat.size.smaller" catalog="system" symbolScale="large"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="テキスト" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNU-ks-oSl">
+                                        <rect key="frame" x="0.0" y="79.666666666666657" width="100" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KH8-TC-S6d"/>
+                                    <constraint firstAttribute="width" constant="100" id="Sl1-XT-uRX"/>
+                                    <constraint firstItem="MMR-UX-nFh" firstAttribute="top" secondItem="F3c-3y-CY9" secondAttribute="top" id="a3A-It-CLB"/>
+                                    <constraint firstAttribute="bottom" secondItem="MMR-UX-nFh" secondAttribute="bottom" constant="20.329999999999998" id="n6u-mN-rt8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qDR-g2-r97" firstAttribute="top" secondItem="F3c-3y-CY9" secondAttribute="top" id="2n6-qk-iKw"/>
+                            <constraint firstItem="F3c-3y-CY9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="Kkm-na-IFo"/>
+                            <constraint firstItem="F3c-3y-CY9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="Q8x-ZN-Vla"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qDR-g2-r97" secondAttribute="trailing" constant="50" id="cF7-lB-0kA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pictureButton" destination="qDR-g2-r97" id="0Pi-rG-RRN"/>
+                        <outlet property="textButton" destination="F3c-3y-CY9" id="rZ6-ic-5sI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="-2"/>
+            <point key="canvasLocation" x="140" y="-2.1327014218009479"/>
         </scene>
     </scenes>
     <resources>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <image name="textformat.size.smaller" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

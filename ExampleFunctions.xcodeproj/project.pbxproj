@@ -20,6 +20,7 @@
 		767F70A028E3E89600364FD1 /* ExampleFunctionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F709F28E3E89600364FD1 /* ExampleFunctionsUITestsLaunchTests.swift */; };
 		767F70B128E42BE900364FD1 /* UIKitMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F70B028E42BE900364FD1 /* UIKitMenu.swift */; };
 		767F70B328E42D3100364FD1 /* UIKitMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767F70B228E42D3100364FD1 /* UIKitMenu.storyboard */; };
+		76DA84A428F402F400C0A9AC /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA84A328F402F400C0A9AC /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		767F709F28E3E89600364FD1 /* ExampleFunctionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFunctionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		767F70B028E42BE900364FD1 /* UIKitMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitMenu.swift; sourceTree = "<group>"; };
 		767F70B228E42D3100364FD1 /* UIKitMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIKitMenu.storyboard; sourceTree = "<group>"; };
+		76DA84A328F402F400C0A9AC /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				767F707E28E3E89500364FD1 /* SceneDelegate.swift */,
 				767F70AD28E428AA00364FD1 /* UIKitExample */,
 				767F70AC28E3FADF00364FD1 /* Menu */,
+				76DA84A228F402C100C0A9AC /* Extension */,
 				767F708528E3E89600364FD1 /* Assets.xcassets */,
 				767F708728E3E89600364FD1 /* LaunchScreen.storyboard */,
 				767F708A28E3E89600364FD1 /* Info.plist */,
@@ -177,6 +180,14 @@
 				767F70B228E42D3100364FD1 /* UIKitMenu.storyboard */,
 			);
 			path = UiKit;
+			sourceTree = "<group>";
+		};
+		76DA84A228F402C100C0A9AC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				76DA84A328F402F400C0A9AC /* UIViewExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76DA84A428F402F400C0A9AC /* UIViewExtension.swift in Sources */,
 				767F708128E3E89500364FD1 /* MainMenu.swift in Sources */,
 				764FEADF28E43C9F00E5A65C /* ShareExample.swift in Sources */,
 				767F707D28E3E89500364FD1 /* AppDelegate.swift in Sources */,
