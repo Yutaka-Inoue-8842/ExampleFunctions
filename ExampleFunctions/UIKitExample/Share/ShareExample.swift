@@ -41,7 +41,19 @@ class ShareExample: UIViewController {
     }
     
     @objc func pictureButtonTapped(_ gesture: UITapGestureRecognizer) {
-        presentImagePicker()
+        presentCameraOrPhotoLibraryAlert { sourceType in
+            guard let sourceType = sourceType else { return }
+            switch sourceType {
+            case .camera:
+                self.presentImagePicker(.camera)
+            case .photoLibrary:
+                self.presentImagePicker(.photoLibrary)
+            case .savedPhotosAlbum:
+                break
+            @unknown default:
+                break
+            }
+        }
     }
     
     func presentShareSheet(_ type: ShareItemType) {
@@ -60,10 +72,10 @@ class ShareExample: UIViewController {
 
 extension ShareExample: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    func presentImagePicker() {
+    func presentImagePicker(_ sourceType : UIImagePickerController.SourceType) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
+        imagePicker.sourceType = sourceType
         self.present(imagePicker, animated: true)
     }
     
